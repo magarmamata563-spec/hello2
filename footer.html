@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-main': 'var(--brand-main)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --brand-main: #7C5FDC;
+            --brand-dark: #6B46C1;
+            --brand-light: #A78BFA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .glow-link {
+            transition: all 0.3s ease;
+        }
+
+        .glow-link:hover {
+            color: var(--brand-light) !important;
+            text-shadow: 0 0 5px rgba(167, 139, 250, 0.8);
+            transform: translateY(-1px);
+        }
+
+        .glow-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(167, 139, 250, 0.5), 0 0 8px rgba(167, 139, 250, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+
+
+<footer class="glass-effect border-t border-brand-light/30 footer-blend overflow-hidden mt-12">
+        <div class="container mx-auto px-4 md:px-8 py-8 md:py-12">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-y-10 gap-x-8">
+                <!-- Branding -->
+                <div class="col-span-2 md:col-span-2 space-y-4 pr-8">
+                    <div class="flex items-center space-x-2">
+
+                        <div>
+
+                            <img src="logo.png" alt="Robotics Logo" class="h-16 w-16" />
+                        </div>
+
+                        <!-- <div
+                            class="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 aspect-square rounded-full border-2 md:border-4 border-brand-light/70 flex items-center justify-center bg-brand-dark/20 overflow-hidden glow-link">
+                            <img src="img\logo\logo_high_png[1].png" alt="Robotics Logo"
+                                class="w-full h-full object-contain aspect-square rounded-full">
+                        </div> -->
+                        <span class="text-2xl font-bold tracking-tight glow-link">ROBOTICS</span>
+                    </div>
+                    <p class="text-sm text-black max-w-xs">
+                        Elevating digital experiences with intuitive design and powerful technology.
+                    </p>
+                    <!-- <a href="#newsletter"
+                        class="inline-block px-4 py-2 text-sm font-semibold bg-brand-light hover:bg-brand-dark text-brand-dark rounded-lg transition duration-300 shadow-lg glow-btn">
+                        Join Our Newsletter
+                    </a> -->
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-span-1">
+                    <h3
+                        class="text-lg font-bold mb-4 text-white-400 glow-link bg-purple-500 text-white px-1 py-1 rounded-lg text-center">
+                        Company</h3>
+                    <ul class="space-y-3 text-sm ">
+                        <li><a href="#" class="text-black glow-link">About Us</a></li>
+                        <li><a href="#" class="text-black glow-link">Careers (We're Hiring!)</a></li>
+                        <li><a href="#" class="text-black glow-link">Our Team</a></li>
+                        <li><a href="#" class="text-black glow-link">Press & Media</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Links -->
+                <div class="col-span-1">
+                    <h3
+                        class="text-lg font-semibold mb-4 text-brand-light glow-link bg-purple-500 text-white px-1 py-1 rounded-lg text-center">
+                        Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class=" text-black glow-link">Developer Docs</a></li>
+                        <li><a href="#" class=" text-black glow-link">Customer Support</a></li>
+                        <li><a href="#" class="text-black glow-link">FAQ</a></li>
+                        <li><a href="#" class="text-black glow-link">Product Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-span-2 md:col-span-2 space-y-4">
+                    <h3
+                        class=" w-40 h-10 text-lg font-semibold mb-4 text-brand-light glow-link bg-purple-500 text-white px-1 py-1 rounded-lg text-center">
+                        Get In Touch</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2 text-brand-light"></i>
+                            <a href="mailto:contact@robotics.com"
+                                class="text-black glow-link text-black">contact@robotics.com</a>
+                        </div>
+                        <div class="flex items-start text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-brand-light flex-shrink-0"></i>
+                            <span class="text-black">123 Tech Drive, Suite 400, Silicon Valley, CA 94000</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2 text-brand-light"></i>
+                            <a href="tel:+15551234567" class="text-black glow-link">(555) 123-4567</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-brand-dark/50 my-6">
+
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center space-y-6 md:space-y-0">
+                <div class="text-sm text-black">
+                    &copy; 2025 Robotics, Inc. All rights reserved.
+                    <span class="block sm:inline-block text-gray-600">|</span>
+                    <a href="#" class="glow-link ml-1">Privacy Policy</a>
+                    <span class="hidden sm:inline-block text-gray-600">|</span>
+                    <a href="#" class="glow-link ml-1">Terms of Service</a>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="#" class="text-black rounded-full p-2 bg-brand-dark glow-btn">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-black rounded-full p-2 bg-brand-dark glow-btn">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class=" text-black
+ rounded-full p-2 bg-brand-dark glow-btn">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-black rounded-full p-2 bg-brand-dark glow-btn">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+
+    </script>
+
+</body>
+</html>
